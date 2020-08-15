@@ -90,6 +90,7 @@ a {
 .container-skills > p{
     color: grey;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 40%;
 }
 
 .imagen{
@@ -128,7 +129,9 @@ a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-bottom: 40px;
+    align-items: center;
+    width:60%;
+    padding-bottom: 5%;
 }
 
 /*Los bloques de la grilla*/
@@ -140,8 +143,8 @@ a {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 5%;
+    justify-content: center;
+    border: 1px solid #dddfe5;
 }
 
 /*Los <p> que estan dentro de los bloques */
@@ -149,10 +152,12 @@ a {
     font-size: 1rem;
     font-family: verdana;
     font-weight: 700;
+    margin: 10px;
+    padding:30px;
 }
 
 .skills p{
-    width: 500px;
+    width: auto;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -184,8 +189,18 @@ h3 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
     background-color: rgb(131,56,236);
+    height: 70vh;
+    color: white;
+}
+.container-frase i{
+    font-size: 4rem;
+    padding-bottom:5%;
+}
+.contenedor-frase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .frase{
@@ -193,7 +208,10 @@ h3 {
     vertical-align: center;
     font-size: 1rem;
     font-family: verdana;
-    padding: 15px;
+    width: 80%;
+}
+h1 {
+    font-size: 1.5rem;
 }
 
 button, .button {
@@ -208,9 +226,6 @@ button, .button {
     color: white !important;
 }
 
-.proyectos-nav a{
-    font-family: monospace;
-}
 
 /*El selector a:link y a:visited hace referencia al detalle de los links y de los links visitados*/
 
@@ -238,21 +253,28 @@ a:visited{
     flex-direction: column;
     align-items: center;
     padding: 5%;
+    text-align: center;
 }
-h2{
-    font-size: 1rem;
+.frase-text{
+    font-size: 1.2rem;
     font-family: verdana;
-    padding: 10px;
-    font-weight: 700;
+    padding: 2%;
 }
 
 /*------------------CONTAINER PROYECTOS------------------*/
 
 .proyectos-nav{
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 2%;
+}
+.proyectos-nav a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding:0px 30px;
+    margin: 8px;
+    
 }
 
 .proyectos-grid{
@@ -261,35 +283,80 @@ h2{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 90%;
 }
 .box-proyectos{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: (calc 100% / 3);
-    padding: 5%;
-
 }
 .box-grid{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 1px solid #e0e0e0;
+    margin: 1%;
+    padding:2%;
+    border-radius: 8px;
+    width: 240px;
+    height: 219px;
+}
+
+.proyectos-grid img{
+    width:190px;
+    height: 140px;
 }
 
 a p{
-    font-family: verdana;
-    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700px;
+    color: grey;
     font-size: 1rem;
 }
 
 .container-skills p{
-    padding: 5%;
+    padding: 2%;
   }
 .container-skills{
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
+/*------------------FOOTER------------------*/
+.nav-footer{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-decoration: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav-footer li a {
+    margin: 15px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    font-family: verdana;
+    color: white;
+}
+.container-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(131,56,236);
+    height: 40vh;
+    color: white;
+}
+.nav-footer i{
+    font-size: 2.5rem;
+    padding: 10px;
+    padding-top: 40px;
+}
+.container-footer p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+    padding-top: 15px;
+}
 
 /*------------------MEDIA QUERIES------------------*/
 
@@ -326,7 +393,7 @@ a p{
             padding-bottom: 5%;
         }
         .imagen {
-            width: 80%;
+            width: 60%;
             padding: 0px;
         }
         .nav {
@@ -348,13 +415,15 @@ a p{
         .fas{
             display: none;
         }
-
+        .contenedor-box{
+            width: 80%;
+        }
 
   } 
 
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     h3{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
       .nav li a {
@@ -379,9 +448,62 @@ a p{
       }
       .box-skills{
           width: 110px;
+          margin: 10px;
+          padding:30px;
       }
 
       .imagen{
           width: 80%;
+          padding-top:25px;
       }
+    
+      .proyectos-nav a{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding:0px 10px;
+        margin: 5px;
+        font-size: 0.8rem;
+    }
+    .proyectos-nav{
+        padding-bottom: 20px;
+    }
+    .frase-text{
+        font-size: 0.8rem;
+    }
+    .contenedor-box{
+        width: 100%;
+    }
+    .container-skills p{
+        width: 80%;
+        padding-bottom:20px ;
+    }
+    .box-skills{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:90px;
+        padding: 20px;
+
+        margin: 5px;
+    }
+    .box-skills p{
+        font-size: 0.7rem;
+        padding: 0px;
+        font-weight: 400px;
+        color: rgb(66, 64, 64);
+
+    }
+    .box-skills i{
+        font-size: 3rem;
+    }
+    .nav-footer li a{
+        font-size: 0.6rem;
+        padding:0px;
+        margin: 10px;
+    }
+    .nav-footer i{
+        font-size: 2rem;
+        padding: 10px;
+        padding-top: 40px;
+    }
+   
    }
